@@ -4,7 +4,7 @@ const dbOptions = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: '50gr_turizmas',
+    database: 'turizmas',
 };
 
 export let connection = null;
