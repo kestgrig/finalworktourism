@@ -61,7 +61,7 @@ export function Register() {
                             <input value={username} onChange={e => setUsername(e.target.value.trim())}
                                 type="text" id="username" placeholder="Chuck"
                                 className={'form-control ' + (isFormValidated ? usernameError ? 'is-invalid' : 'is-valid' : '')} />
-                            <label htmlFor="username">Spapyvardis</label>
+                            <label htmlFor="username">Slapyvardis</label>
                             {usernameError && <p className="invalid-feedback">{usernameError}</p>}
                         </div>
 
@@ -69,7 +69,7 @@ export function Register() {
                             <input value={password} onChange={e => setPassword(e.target.value)}
                                 type="password" id="password" placeholder="Password"
                                 className={'form-control ' + (isFormValidated ? passwordError ? 'is-invalid' : 'is-valid' : '')} />
-                            <label htmlFor="password">Spaltažodis</label>
+                            <label htmlFor="password">Slaptažodis</label>
                             {passwordError && <p className="invalid-feedback">{passwordError}</p>}
                         </div>
 
