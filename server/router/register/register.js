@@ -51,6 +51,23 @@ async function postRegister(req, res) {
         });
     }
 
+    try {
+        const sql = 'SELECT username FROM users WHERE username = ?;';
+        const result = await connection.execute(sql, [username]);
+
+        if (result[0].length !== 0) {
+            return res.json({
+                status: 'error',
+                msg: 'Vartotojas su tokiu username jau yra uzregistruotas',
+            });
+        }
+
+    } catch (error) {
+        return res.json({
+            status: 'error',
+            msg: 'Del techniniu kliuciu nepavyko ivykdyti registracijos proceso, pabandykite veliau',
+        });
+    }
 
     try {
         const sql = 'INSERT INTO users (username, password) VALUES (?, ?);';
