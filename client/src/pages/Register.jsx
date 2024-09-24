@@ -61,7 +61,7 @@ export function Register() {
                     <form onSubmit={submitForm} className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <h1 className="h3 mb-3 fw-normal">Registracija</h1>
 
-                        {apiResponse && apiResponse.status === 'success' ? <p className="alert alert-success">{apiResponse.data}</p> : null}
+                        {apiResponse && apiResponse.status === 'success' ? <p className="alert alert-success">{apiResponse.msg}</p> : null}
                         {apiResponse && apiResponse.status === 'error' ? <p className="alert alert-danger">{apiResponse.msg}</p> : null}
 
                         <div className="form-floating">
@@ -80,7 +80,7 @@ export function Register() {
                             {passwordError && <p className="invalid-feedback">{passwordError}</p>}
                         </div>
 
-                        <button className="btn btn-primary w-100 py-2 mt-3" type="submit">Prisijungti</button>
+                        <button className="btn btn-primary w-100 py-2 mt-3" type="submit">Registruotis</button>
                     </form>
                 </div>
             </main>
